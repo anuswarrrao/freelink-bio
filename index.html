@@ -3,346 +3,236 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Primary Meta Tags -->
   <title>Anuswar R Rao – Full-Stack Developer | Portfolio</title>
-  <meta name="title" content="Anuswar R Rao – Full-Stack Developer | Portfolio">
   <meta name="description" content="Explore the portfolio, projects, and social profiles of Anuswar R Rao, a Full-Stack Developer from India.">
-  <meta name="keywords" content="Anuswar R Rao, Full-Stack Developer, Web Developer, Portfolio, GitHub, LinkedIn, India, Projects, Personal Website">
   <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-
-  <!-- Canonical URL -->
   <link rel="canonical" href="https://anuswarrrao.sbs/">
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" href="assets/images/favicon/favicon-16x16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="assets/images/favicon/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Anuswar R Rao">
-  <meta name="application-name" content="Anuswar R Rao">
+  <link rel="icon" type="image/png" href="assets/images/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="assets/images/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="assets/images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
-
-  <!-- Windows Tile Color & Theme Color -->
-  <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#000000">
   <meta name="color-scheme" content="dark light">
 
-  <!-- Open Graph / Facebook / WhatsApp / Telegram / LinkedIn -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://anuswarrrao.sbs/">
   <meta property="og:title" content="Anuswar R Rao – Full-Stack Developer | Portfolio">
   <meta property="og:description" content="Explore the portfolio, projects, and social profiles of Anuswar R Rao, a Full-Stack Developer from India.">
   <meta property="og:image" content="https://anuswarrrao.sbs/assets/images/preview.jpg">
-  <meta property="og:image:secure_url" content="https://anuswarrrao.sbs/assets/images/preview.jpg">
-  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Anuswar R Rao – Full-Stack Developer | Portfolio">
-  <meta property="og:site_name" content="Anuswar R Rao">
-  <meta property="og:locale" content="en_US">
-
-  <!-- Author / Article Info -->
-  <meta name="author" content="Anuswar R Rao">
-  <meta property="article:author" content="https://www.linkedin.com/in/anuswarrrao">
-  <meta property="article:published_time" content="2025-07-10T00:00:00+05:30">
-
-  <!-- Pinterest -->
-  <meta name="pinterest-rich-pin" content="true">
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@anuswarrrao">
-  <meta name="twitter:creator" content="@anuswarrrao">
   <meta name="twitter:title" content="Anuswar R Rao – Full-Stack Developer | Portfolio">
   <meta name="twitter:description" content="Explore the portfolio, projects, and social profiles of Anuswar R Rao, a Full-Stack Developer from India.">
-  <meta name="twitter:image" content="assets/images/preview.jpg">
+  <meta name="twitter:image" content="https://anuswarrrao.sbs/assets/images/preview.jpg">
 
-  <!-- Preload critical resources -->
-  <link rel="preload" as="image" href="assets/images/anuswar-rao-profile-photo.webp">
+  <link rel="preload" as="image" href="assets/images/anuswar-rao-profile-photo.webp" fetchpriority="high">
   <link rel="preload" as="font" href="libraries/google-font/Nunito-Regular.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="libraries/google-font/Nunito-SemiBold.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="libraries/google-font/Nunito-ExtraBold.woff2" type="font/woff2" crossorigin>
 
-  <!-- Animate Library (CSS) -->
-  <link rel="stylesheet" href="libraries/animate.min.css" />
-
-  <!-- Google Fonts Library (CSS) -->
-  <link rel="stylesheet" href="libraries/google-font/font.css">
-
-  <!-- Toast Notifications Library (CSS) -->
-  <link rel="stylesheet" type="text/css" href="libraries/toastify/toastify.min.css">
-
-  <!-- Main Styles (CSS) -->
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preload" href="libraries/google-font/font.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="libraries/google-font/font.css"></noscript>
+  <link rel="preload" href="libraries/toastify/toastify.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="libraries/toastify/toastify.min.css"></noscript>
 </head>
 
 <body>
 
-  <!--=============== DARK MODE TOGGLE ===============-->
-  <header id="top">
+  <header>
     <nav aria-label="Theme switcher">
       <div id="dark-mode-toggle">
         <button id="theme-toggle" aria-label="Toggle dark or light mode" title="Toggle dark/light mode">
-          <img id="theme-icon" class="icon icon-small" src="assets/images/icon/moon.svg" alt="" aria-hidden="true">
+          <img id="theme-icon" class="icon" src="assets/images/icon/moon.svg" alt="" aria-hidden="true" width="24" height="24" fetchpriority="high" decoding="async">
         </button>
       </div>
     </nav>
   </header>
 
-  <!--=============== MAIN CONTAINER ===============-->
-  <main class="main-container" role="main">
+  <main class="main-container">
 
-    <!--=============== BIO SECTION ===============-->
-    <section class="head-section animate__animated animate__fadeInDown" aria-labelledby="profile-name">
-
-      <!-- Profile Photo -->
+    <section class="head-section entrance entrance--fade-in-down" aria-labelledby="profile-name">
       <div class="blob-center">
         <figure class="blob-wrapper">
-          <img src="assets/images/anuswar-rao-profile-photo.webp" alt="Anuswar R Rao Profile Photo" class="blob-image animate__animated animate__fadeInLeft">
+          <img src="assets/images/anuswar-rao-profile-photo.webp" alt="Anuswar R Rao Profile Photo" class="blob-image" width="160" height="160" fetchpriority="high" decoding="async">
           <figcaption class="visually-hidden">Anuswar R Rao</figcaption>
         </figure>
       </div>
 
-      <!-- Profile Name -->
-      <h1 id="profile-name" class="animate__animated animate__fadeInRight">Anuswar R Rao</h1>
+      <h1 id="profile-name" class="entrance entrance--fade-in-right">Anuswar R Rao</h1>
 
-      <!-- Contact Buttons -->
       <div class="button-container">
-
-        <!-- Phone Number Button -->
         <a href="tel:+919008319263" class="number-btn" aria-label="Call Anuswar R Rao" title="Call Anuswar R Rao">
-          <img src="assets/images/icon/phone.svg" alt="Phone icon" class="icon icon-small">
+          <img src="assets/images/icon/phone.svg" alt="" class="icon icon-small" aria-hidden="true">
           +91 90083 192639
         </a>
-
-        <!-- Mail Button -->
         <a href="mailto:anuswarrrao@gmail.com" class="mail-btn" aria-label="Email Anuswar R Rao" title="Send email">
-          <img src="assets/images/icon/mail.svg" alt="Email icon" class="icon icon-small">
+          <img src="assets/images/icon/mail.svg" alt="" class="icon icon-small" aria-hidden="true">
         </a>
-
-        <!-- Share Button -->
         <button class="share-btn share-trigger" data-link="https://anuswarrrao.sbs/" aria-label="Share this profile" title="Share profile link">
-          <img src="assets/images/icon/share.svg" alt="Share icon" class="icon icon-small" fetchpriority="high" decoding="async">
+          <img src="assets/images/icon/share.svg" alt="" class="icon icon-small" aria-hidden="true" decoding="async">
         </button>
       </div>
 
-      <!-- Description -->
-      <p class="lead animate__animated animate__fadeInUp">
+      <p class="lead entrance entrance--fade-in-up">
         Based in India, I'm a Full-Stack Developer passionate about building accessible web apps that users love.
       </p>
     </section>
 
-    <!--=============== LINKS SECTION ===============-->
-    <section class="social-links animate__animated animate__fadeInUp" aria-labelledby="connect-heading">
+    <section class="social-links entrance entrance--fade-in-up" aria-labelledby="connect-heading">
       <h2 id="connect-heading" class="visually-hidden">Connect with me</h2>
       <ul>
-
-        <!-- Website -->
-        <li class="link-item animate__animated animate__bounceIn">
+        <li class="link-item">
           <div class="link-wrapper">
-            <a href="https://anuswarrrao.netlify.app/" target="_blank" rel="noopener" aria-label="Visit personal website of Anuswar R Rao" title="My Website">
-              <img src="assets/images/icon/website.svg" class="icon icon-large" alt="Website Icon">
-
+            <a href="https://anuswarrrao.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Visit personal website of Anuswar R Rao" title="My Website">
+              <img src="assets/images/icon/website.svg" class="icon icon-large" alt="">
               <div>
                 <h3>My Website</h3>
                 <small>Visit my personal website.</small>
               </div>
             </a>
-
             <button class="dots-btn share-trigger" type="button" data-link="https://anuswarrrao.netlify.app/" aria-label="Share website link" title="Share website link">
-              <img src="assets/images/icon/dots.svg" class="dots-img icon-large"  alt="" aria-hidden="true">
+              <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true">
             </button>
           </div>
         </li>
-
-        <!-- Buy Me a Coffee -->
-        <li class="link-item animate__animated animate__bounceIn">
+        <li class="link-item">
           <div class="link-wrapper">
-            <a href="https://coff.ee/anuswarrrao" target="_blank" rel="noopener" aria-label="Support Anuswar R Rao with a coffee" title="Buy Me a Coffee">
-              <img src="assets/images/icon/coffee.svg" class="icon icon-large" alt="Discord Icon">
-
+            <a href="https://coff.ee/anuswarrrao" target="_blank" rel="noopener noreferrer" aria-label="Support Anuswar R Rao with a coffee" title="Buy Me a Coffee">
+              <img src="assets/images/icon/coffee.svg" class="icon icon-large" alt="">
               <div>
                 <h3>Buy Me a Coffee</h3>
                 <small>Support my work with a coffee</small>
               </div>
             </a>
-
             <button class="dots-btn share-trigger" type="button" data-link="https://coff.ee/anuswarrrao" aria-label="Share coffee support link" title="Share coffee support link">
-              <img src="assets/images/icon/dots.svg" class="dots-img icon-large"  alt="" aria-hidden="true">
+              <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true">
             </button>
           </div>
         </li>
-
-        <!-- Discord -->
-        <li class="link-item animate__animated animate__bounceIn">
+        <li class="link-item">
           <div class="link-wrapper">
-            <a href="https://discord.com/users/951502276147675187" target="_blank" rel="noopener" aria-label="Connect with Anuswar R Rao on Discord" title="Discord">
-              <img src="assets/images/icon/discord.svg" class="icon icon-large" alt="Discord Icon">
-
+            <a href="https://discord.com/users/951502276147675187" target="_blank" rel="noopener noreferrer" aria-label="Connect with Anuswar R Rao on Discord" title="Discord">
+              <img src="assets/images/icon/discord.svg" class="icon icon-large" alt="">
               <div>
                 <h3>Discord</h3>
                 <small>Connect with me on Discord.</small>
               </div>
             </a>
-
             <button class="dots-btn share-trigger" type="button" data-link="https://discord.com/users/951502276147675187" aria-label="Share Discord link" title="Share Discord link">
-              <img src="assets/images/icon/dots.svg" class="dots-img icon-large"  alt="" aria-hidden="true">
+              <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true">
             </button>
           </div>
         </li>
-
-        <!-- GitHub -->
-        <li class="link-item animate__animated animate__bounceIn">
+        <li class="link-item">
           <div class="link-wrapper">
-            <a href="https://github.com/anuswarrrao" target="_blank" rel="noopener" aria-label="Visit GitHub profile of Anuswar R Rao" title="GitHub">
-              <img src="assets/images/icon/github.svg" class="icon icon-large" alt="GitHub Icon">
-
+            <a href="https://github.com/anuswarrrao" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile of Anuswar R Rao" title="GitHub">
+              <img src="assets/images/icon/github.svg" class="icon icon-large" alt="">
               <div>
                 <h3>GitHub</h3>
                 <small>Download free source code on GitHub.</small>
               </div>
             </a>
-
             <button class="dots-btn share-trigger" type="button" data-link="https://github.com/anuswarrrao" aria-label="Share GitHub link" title="Share GitHub link">
-              <img src="assets/images/icon/dots.svg" class="dots-img icon-large"  alt="" aria-hidden="true">
+              <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true">
             </button>
           </div>
         </li>
-
-        <!-- LinkedIn -->
-        <li class="link-item animate__animated animate__bounceIn">
+        <li class="link-item">
           <div class="link-wrapper">
-            <a href="https://www.linkedin.com/in/anuswarrrao" target="_blank" rel="noopener" aria-label="Visit LinkedIn profile of Anuswar R Rao" title="LinkedIn">
-              <img src="assets/images/icon/linkedin.svg" class="icon icon-large" alt="LinkedIn Icon">
-
+            <a href="https://www.linkedin.com/in/anuswarrrao" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile of Anuswar R Rao" title="LinkedIn">
+              <img src="assets/images/icon/linkedin.svg" class="icon icon-large" alt="">
               <div>
                 <h3>LinkedIn</h3>
                 <small>Connect with me on LinkedIn.</small>
               </div>
             </a>
-
             <button class="dots-btn share-trigger" type="button" data-link="https://www.linkedin.com/in/anuswarrrao" aria-label="Share LinkedIn link" title="Share LinkedIn link">
-              <img src="assets/images/icon/dots.svg" class="dots-img icon-large"  alt="" aria-hidden="true">
+              <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true">
             </button>
           </div>
         </li>
-
-        <!-- Instagram -->
-        <li class="link-item animate__animated animate__bounceIn">
+        <li class="link-item">
           <div class="link-wrapper">
-            <a href="https://www.instagram.com/anuswarrrao" target="_blank" rel="noopener" aria-label="Visit Instagram profile of Anuswar R Rao" title="Instagram">
-              <img src="assets/images/icon/instagram.svg" class="icon icon-large" alt="Instagram Icon">
-
+            <a href="https://www.instagram.com/anuswarrrao" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram profile of Anuswar R Rao" title="Instagram">
+              <img src="assets/images/icon/instagram.svg" class="icon icon-large" alt="">
               <div>
                 <h3>Instagram</h3>
                 <small>Follow me for more updates.</small>
               </div>
             </a>
-
             <button class="dots-btn share-trigger" type="button" data-link="https://www.instagram.com/anuswarrrao" aria-label="Share Instagram link" title="Share Instagram link">
-              <img src="assets/images/icon/dots.svg" class="dots-img icon-large"  alt="" aria-hidden="true">
+              <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true">
             </button>
           </div>
         </li>
-
-        <!-- Facebook -->
-        <li class="link-item animate__animated animate__bounceIn">
+        <li class="link-item">
           <div class="link-wrapper">
-            <a href="https://www.facebook.com/anuswarrrao" target="_blank" rel="noopener" aria-label="Visit Facebook profile of Anuswar R Rao" title="Facebook">
-              <img src="assets/images/icon/facebook.svg" class="icon icon-large" alt="Facebook Icon">
-
+            <a href="https://www.facebook.com/anuswarrrao" target="_blank" rel="noopener noreferrer" aria-label="Visit Facebook profile of Anuswar R Rao" title="Facebook">
+              <img src="assets/images/icon/facebook.svg" class="icon icon-large" alt="">
               <div>
                 <h3>Facebook</h3>
                 <small>Check out my Facebook page.</small>
               </div>
             </a>
-
             <button class="dots-btn share-trigger" type="button" data-link="https://www.facebook.com/anuswarrrao" aria-label="Share Facebook link" title="Share Facebook link">
-              <img src="assets/images/icon/dots.svg" class="dots-img icon-large"  alt="" aria-hidden="true">
+              <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true">
             </button>
           </div>
         </li>
-
-        <!-- Twitter / X -->
-        <li class="link-item animate__animated animate__bounceIn">
+        <li class="link-item">
           <div class="link-wrapper">
-            <a href="https://x.com/anuswarrrao" target="_blank" rel="noopener" aria-label="Visit X (Twitter) profile of Anuswar R Rao" title="Twitter / X">
-              <img src="assets/images/icon/twitter.svg" class="icon icon-large" alt="Twitter Icon">
-
+            <a href="https://x.com/anuswarrrao" target="_blank" rel="noopener noreferrer" aria-label="Visit X (Twitter) profile of Anuswar R Rao" title="Twitter / X">
+              <img src="assets/images/icon/twitter.svg" class="icon icon-large" alt="">
               <div>
                 <h3>Twitter</h3>
                 <small>Follow me on X / Twitter.</small>
               </div>
             </a>
-
             <button class="dots-btn share-trigger" type="button" data-link="https://x.com/anuswarrrao" aria-label="Share Twitter link" title="Share Twitter link">
-              <img src="assets/images/icon/dots.svg" class="dots-img icon-large"  alt="" aria-hidden="true">
+              <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true">
             </button>
           </div>
         </li>
-
       </ul>
     </section>
 
   </main>
 
-  <!--=============== SHARE POPUP ===============-->
   <div id="shareOverlay" class="share-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="popupTitle" aria-describedby="popupDesc">
-
-    <div id="sharePopup" class="share-popup" role="document">
-
-      <!-- Close Button -->
+    <div class="share-popup">
       <button id="closeSharePopup" class="close-btn" aria-label="Close share popup" title="Close">
-        <img src="assets/images/icon/close.svg" class="icon icon-small" alt="" aria-hidden="true" />
+        <img src="assets/images/icon/close.svg" class="icon icon-small" alt="" aria-hidden="true">
       </button>
-
-      <!-- Popup Header -->
       <div class="popup-header">
         <h2 id="popupTitle" class="popup-title">Share Link</h2>
-        <p id="popupDesc" class="popup-subtitle">
-          Scan QR code or use the buttons below
-        </p>
+        <p id="popupDesc" class="popup-subtitle">Scan QR code or use the buttons below</p>
       </div>
-
-      <!-- QR Code Container -->
       <div class="qr-container">
-        <div id="qrContainer" class="qr-image loading" aria-busy="true" aria-label="QR Code area">
-          <div style="color: rgba(0, 0, 0, 0.4);">Generating QR Code...</div>
-        </div>
+        <div id="qrContainer" class="qr-image" aria-label="QR Code area"></div>
       </div>
-
-      <!-- Share Action Buttons -->
       <div class="share-actions">
-
         <button id="shareBtn" aria-label="Share this link" title="Share this link">
-          <img src="assets/images/icon/share.svg" class="icon icon-large" alt="" aria-hidden="true" />
+          <img src="assets/images/icon/share.svg" class="icon icon-large" alt="" aria-hidden="true">
         </button>
-
-        <button id="copyBtn" class="clipboard-btn" aria-label="Copy link to clipboard" title="Copy link" data-clipboard-text="">
-          <img src="assets/images/icon/copy.svg" class="icon icon-large" alt="" aria-hidden="true" />
+        <button id="copyBtn" aria-label="Copy link to clipboard" title="Copy link" data-clipboard-text="">
+          <img src="assets/images/icon/copy.svg" class="icon icon-large" alt="" aria-hidden="true">
         </button>
-
         <button id="downloadBtn" aria-label="Download QR code" title="Download QR code">
-          <img src="assets/images/icon/download.svg" class="icon icon-large" alt="" aria-hidden="true" />
+          <img src="assets/images/icon/download.svg" class="icon icon-large" alt="" aria-hidden="true">
         </button>
-
       </div>
     </div>
   </div>
 
-  <!-- QR Code Generator Library (JS) -->
   <script src="libraries/qrcode.min.js" defer></script>
-
-  <!-- Toast Notifications Library (JS) -->
   <script src="libraries/toastify/toastify-js" defer></script>
-
-  <!-- Main Script (JS) -->
   <script src="js/app.js" type="module" defer></script>
 </body>
 

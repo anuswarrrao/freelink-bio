@@ -63,8 +63,7 @@ freelink-bio/
 │
 ├── assets/                  # Static assets directory
 │   ├── css/
-│   │   └── styles.css       # Main stylesheet with hover effects
-│   ├── scss/                # SCSS source files (optional)
+│   │   └── styles.css       # Main stylesheet
 │   └── images/
 │       ├── favicon/         # Favicon files for all platforms
 │       ├── icon/            # SVG icons (arrow, dots, social media, etc.)
@@ -78,7 +77,6 @@ freelink-bio/
 └── libraries/               # Third-party libraries
     ├── google-font/         # Self-hosted Nunito font files
     ├── toastify/            # Toast notification library
-    ├── animate.min.css      # Animation library
     └── qrcode.min.js        # QR code generation library
 ```
 
@@ -88,9 +86,7 @@ freelink-bio/
 | Tool / Library    | Purpose                          |
 |-------------------|----------------------------------|
 | **HTML, CSS, JS** | Core Structure & Functionality   |
-| **SCSS/Sass/**    | CSS Preprocessor for styling     |
 | Google Fonts      | Custom Typography (Nunito)       |
-| Animate.css       | Transitions & Animations         |
 | QRCode.js         | QR Code Generation               |
 | Toastify.js       | Toast Notifications              |
 

@@ -1,10 +1,8 @@
-
-import { generateQR } from './qr.js';
-import { showToast } from './utils.js';
-import { initializeClipboard } from './clipboard.js';
+import { generateQR } from "./qr.js";
+import { showToast } from "./utils.js";
+import { initializeClipboard } from "./clipboard.js";
 
 const overlay = document.getElementById("shareOverlay");
-const popup = document.getElementById("sharePopup");
 const qrContainer = document.getElementById("qrContainer");
 const closeBtn = document.getElementById("closeSharePopup");
 const copyBtn = document.getElementById("copyBtn");
@@ -13,80 +11,73 @@ const downloadBtn = document.getElementById("downloadBtn");
 
 let currentLink = "";
 
-function handleShareClick(e) {
-    e.preventDefault();
-    currentLink = this.getAttribute("data-link");
-    copyBtn.setAttribute("data-clipboard-text", currentLink);
-    overlay.classList.remove("hidden");
-    setTimeout(() => overlay.classList.add("active"), 10);
-    generateQR(qrContainer, currentLink);
+function openPopup(link) {
+  currentLink = link;
+  copyBtn.setAttribute("data-clipboard-text", link);
+  overlay.classList.remove("hidden");
+  requestAnimationFrame(() => overlay.classList.add("active"));
+  generateQR(qrContainer, link);
 }
 
 function closePopup() {
-    overlay.classList.remove("active");
-    setTimeout(() => {
-        overlay.classList.add("hidden");
-        qrContainer.classList.add("loading");
-    }, 300);
+  overlay.classList.remove("active");
+  setTimeout(() => overlay.classList.add("hidden"), 300);
 }
 
 const initializeShare = () => {
-    document.querySelectorAll(".share-trigger").forEach((btn) => {
-        btn.addEventListener("click", handleShareClick);
+  document.querySelectorAll(".share-trigger").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      openPopup(btn.getAttribute("data-link"));
     });
+  });
 
-    closeBtn.onclick = closePopup;
+  closeBtn.addEventListener("click", closePopup);
 
-    overlay.onclick = (e) => {
-        if (e.target === overlay) closePopup();
-    };
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) closePopup();
+  });
 
-    document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && overlay.classList.contains("active")) {
-            closePopup();
-        }
-    });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay.classList.contains("active")) {
+      closePopup();
+    }
+  });
 
-    initializeClipboard(copyBtn);
+  initializeClipboard(copyBtn);
 
-    shareBtn.onclick = async () => {
-        if (navigator.share) {
-            try {
-                await navigator.share({
-                    title: "Check this out!",
-                    text: "I wanted to share this link with you",
-                    url: currentLink,
-                });
-            } catch (err) {
-                if (err.name !== "AbortError") {
-                    showToast("Share failed", true);
-                }
-            }
-        } else {
-            showToast("Sharing not supported on this device", true);
-        }
-    };
+  shareBtn.addEventListener("click", async () => {
+    if (!navigator.share) {
+      showToast("Sharing not supported on this device", true);
+      return;
+    }
+    try {
+      await navigator.share({
+        title: "Check this out!",
+        text: "I wanted to share this link with you",
+        url: currentLink,
+      });
+    } catch (err) {
+      if (err.name !== "AbortError") showToast("Share failed", true);
+    }
+  });
 
-    downloadBtn.onclick = () => {
-        const canvas = qrContainer.querySelector("canvas");
-        const img = qrContainer.querySelector("img");
+  downloadBtn.addEventListener("click", () => {
+    const canvas = qrContainer.querySelector("canvas");
+    const img = qrContainer.querySelector("img");
+    const source = canvas?.toDataURL("image/png") || img?.src;
 
-        if (canvas) {
-            const link = document.createElement("a");
-            link.href = canvas.toDataURL("image/png");
-            link.download = `qr-code-${Date.now()}.png`;
-            link.click();
-            showToast("QR code downloaded!");
-        } else if (img) {
-            const link = document.createElement("a");
-            link.href = img.src;
-            link.download = `qr-code-${Date.now()}.png`;
-            link.click();
-            showToast("QR code downloaded!");
-        } else {
-            showToast("QR code not ready", true);
-        }
-    };
+    if (!source) {
+      showToast("QR code not ready", true);
+      return;
+    }
+
+    const link = document.createElement("a");
+    link.href = source;
+    link.download = `qr-code-${Date.now()}.png`;
+    link.click();
+    showToast("QR code downloaded!");
+  });
 };
 
 export { initializeShare };

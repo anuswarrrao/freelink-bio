@@ -1,4 +1,3 @@
-
 let qrCode = null;
 
 function generateQR(qrContainer, link) {
@@ -7,22 +6,19 @@ function generateQR(qrContainer, link) {
     qrCode = null;
   }
 
-  qrContainer.innerHTML =
-    '<div style="color: rgba(0, 0, 0, 0.4);" class="loading">Generating QR Code...</div>';
+  qrContainer.innerHTML = "";
+  qrContainer.setAttribute("aria-busy", "true");
 
-  setTimeout(() => {
-    qrContainer.innerHTML = "";
-    qrContainer.classList.remove("loading");
+  qrCode = new QRCode(qrContainer, {
+    text: link,
+    width: 180,
+    height: 180,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H,
+  });
 
-    qrCode = new QRCode(qrContainer, {
-      text: link,
-      width: 180,
-      height: 180,
-      colorDark: "rgba(0, 0, 0, 0.9)",
-      colorLight: "rgba(255, 255, 255, 0.9)",
-      correctLevel: QRCode.CorrectLevel.H,
-    });
-  }, 500);
+  qrContainer.removeAttribute("aria-busy");
 }
 
 export { generateQR };
