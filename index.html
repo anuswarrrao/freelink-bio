@@ -30,6 +30,18 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#000000">
   <meta name="color-scheme" content="dark light">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        var isLight = saved ? saved === "light" : prefersLight;
+        if (isLight) document.documentElement.classList.add("light-mode");
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.content = isLight ? "#eef2f7" : "#000000";
+      } catch (e) {}
+    })();
+  </script>
   <meta name="application-name" content="Anuswar R Rao">
   <meta name="apple-mobile-web-app-title" content="Anuswar R Rao">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -108,7 +120,7 @@
         "url": "https://anuswarrrao.sbs/",
         "image": "https://anuswarrrao.sbs/assets/images/anuswar-rao-profile-photo.webp",
         "jobTitle": "Full-Stack Developer",
-        "description": "Full-Stack Developer from India passionate about building accessible web apps that users love.",
+        "description": "Full-Stack Developer from India building fast, accessible web apps. Open to freelance work, collaboration, and interesting product ideas.",
         "email": "mailto:anuswarrrao@gmail.com",
         "telephone": "+91-90083-19263",
         "nationality": {
@@ -124,9 +136,9 @@
           "https://github.com/anuswarrrao",
           "https://www.linkedin.com/in/anuswarrrao",
           "https://www.instagram.com/anuswarrrao",
+          "https://discord.com/users/951502276147675187",
           "https://www.facebook.com/anuswarrrao",
           "https://x.com/anuswarrrao",
-          "https://discord.com/users/951502276147675187",
           "https://coff.ee/anuswarrrao"
         ],
         "knowsAbout": [
@@ -178,20 +190,20 @@
       <p class="visually-hidden"><span itemprop="jobTitle">Full-Stack Developer</span> based in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressCountry">India</span></span>.</p>
 
       <div class="button-container">
-        <a href="tel:+919008319263" class="number-btn" aria-label="Call Anuswar R Rao" title="Call Anuswar R Rao" itemprop="telephone" content="+919008319263">
+        <a href="tel:+919008319263" class="number-btn" data-track="Call" aria-label="Call Anuswar R Rao" title="Call Anuswar R Rao" itemprop="telephone" content="+919008319263">
           <img src="assets/images/icon/phone.svg" alt="" class="icon icon-small" aria-hidden="true" width="20" height="20">
           +91 90083 19263
         </a>
-        <a href="mailto:anuswarrrao@gmail.com" class="mail-btn" aria-label="Email Anuswar R Rao" title="Send email" itemprop="email" content="anuswarrrao@gmail.com">
+        <a href="mailto:anuswarrrao@gmail.com" class="mail-btn" data-track="Email" aria-label="Email Anuswar R Rao" title="Send email" itemprop="email" content="anuswarrrao@gmail.com">
           <img src="assets/images/icon/mail.svg" alt="" class="icon icon-small" aria-hidden="true" width="20" height="20">
         </a>
-        <button class="share-btn share-trigger" type="button" data-link="https://anuswarrrao.sbs/" aria-label="Share this profile" title="Share profile link">
+        <button class="share-btn share-trigger" type="button" data-track="Share Profile" data-link="https://anuswarrrao.sbs/" aria-label="Share this profile" title="Share profile link">
           <img src="assets/images/icon/share.svg" alt="" class="icon icon-small" aria-hidden="true" width="20" height="20" decoding="async">
         </button>
       </div>
 
       <p class="lead entrance entrance--fade-in-up" itemprop="description">
-        Based in India, I'm a Full-Stack Developer passionate about building accessible web apps that users love.
+        Full-Stack Developer from India building fast, accessible web apps. Open to freelance work, collaboration, and interesting product ideas.
       </p>
     </header>
 
@@ -200,112 +212,112 @@
       <ul>
         <li class="link-item">
           <div class="link-wrapper">
-            <a href="https://anuswarrrao.netlify.app/" target="_blank" rel="noopener noreferrer me" aria-label="Visit personal website of Anuswar R Rao" title="My Website" itemprop="url">
+            <a href="https://anuswarrrao.netlify.app/" target="_blank" rel="noopener noreferrer me" data-track="Website" aria-label="Visit personal website of Anuswar R Rao" title="My Website" itemprop="url">
               <img src="assets/images/icon/website.svg" class="icon icon-large" alt="" width="28" height="28">
               <div>
                 <h3>My Website</h3>
-                <small>Visit my personal website.</small>
+                <small>Portfolio, work, and more about me.</small>
               </div>
             </a>
-            <button class="dots-btn share-trigger" type="button" data-link="https://anuswarrrao.netlify.app/" aria-label="Share website link" title="Share website link">
+            <button class="dots-btn share-trigger" type="button" data-track="Share Website" data-link="https://anuswarrrao.netlify.app/" aria-label="Share website link" title="Share website link">
               <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true" width="28" height="28">
             </button>
           </div>
         </li>
         <li class="link-item">
           <div class="link-wrapper">
-            <a href="https://coff.ee/anuswarrrao" target="_blank" rel="noopener noreferrer me" aria-label="Support Anuswar R Rao with a coffee" title="Buy Me a Coffee" itemprop="sameAs">
-              <img src="assets/images/icon/coffee.svg" class="icon icon-large" alt="" width="28" height="28">
+            <a href="https://www.linkedin.com/in/anuswarrrao" target="_blank" rel="noopener noreferrer me" data-track="LinkedIn" aria-label="Visit LinkedIn profile of Anuswar R Rao" title="LinkedIn" itemprop="sameAs">
+              <img src="assets/images/icon/linkedin.svg" class="icon icon-large" alt="" width="28" height="28">
               <div>
-                <h3>Buy Me a Coffee</h3>
-                <small>Support my work with a coffee</small>
+                <h3>LinkedIn</h3>
+                <small>Professional profile and career updates.</small>
               </div>
             </a>
-            <button class="dots-btn share-trigger" type="button" data-link="https://coff.ee/anuswarrrao" aria-label="Share coffee support link" title="Share coffee support link">
+            <button class="dots-btn share-trigger" type="button" data-track="Share LinkedIn" data-link="https://www.linkedin.com/in/anuswarrrao" aria-label="Share LinkedIn link" title="Share LinkedIn link">
               <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true" width="28" height="28">
             </button>
           </div>
         </li>
         <li class="link-item">
           <div class="link-wrapper">
-            <a href="https://discord.com/users/951502276147675187" target="_blank" rel="noopener noreferrer me" aria-label="Connect with Anuswar R Rao on Discord" title="Discord" itemprop="sameAs">
+            <a href="https://github.com/anuswarrrao" target="_blank" rel="noopener noreferrer me" data-track="GitHub" aria-label="Visit GitHub profile of Anuswar R Rao" title="GitHub" itemprop="sameAs">
+              <img src="assets/images/icon/github.svg" class="icon icon-large" alt="" width="28" height="28">
+              <div>
+                <h3>GitHub</h3>
+                <small>Open-source projects and source code.</small>
+              </div>
+            </a>
+            <button class="dots-btn share-trigger" type="button" data-track="Share GitHub" data-link="https://github.com/anuswarrrao" aria-label="Share GitHub link" title="Share GitHub link">
+              <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true" width="28" height="28">
+            </button>
+          </div>
+        </li>
+        <li class="link-item">
+          <div class="link-wrapper">
+            <a href="https://www.instagram.com/anuswarrrao" target="_blank" rel="noopener noreferrer me" data-track="Instagram" aria-label="Visit Instagram profile of Anuswar R Rao" title="Instagram" itemprop="sameAs">
+              <img src="assets/images/icon/instagram.svg" class="icon icon-large" alt="" width="28" height="28">
+              <div>
+                <h3>Instagram</h3>
+                <small>Photos, updates, and behind the scenes.</small>
+              </div>
+            </a>
+            <button class="dots-btn share-trigger" type="button" data-track="Share Instagram" data-link="https://www.instagram.com/anuswarrrao" aria-label="Share Instagram link" title="Share Instagram link">
+              <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true" width="28" height="28">
+            </button>
+          </div>
+        </li>
+        <li class="link-item">
+          <div class="link-wrapper">
+            <a href="https://discord.com/users/951502276147675187" target="_blank" rel="noopener noreferrer me" data-track="Discord" aria-label="Connect with Anuswar R Rao on Discord" title="Discord" itemprop="sameAs">
               <img src="assets/images/icon/discord.svg" class="icon icon-large" alt="" width="28" height="28">
               <div>
                 <h3>Discord</h3>
                 <small>Connect with me on Discord.</small>
               </div>
             </a>
-            <button class="dots-btn share-trigger" type="button" data-link="https://discord.com/users/951502276147675187" aria-label="Share Discord link" title="Share Discord link">
+            <button class="dots-btn share-trigger" type="button" data-track="Share Discord" data-link="https://discord.com/users/951502276147675187" aria-label="Share Discord link" title="Share Discord link">
               <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true" width="28" height="28">
             </button>
           </div>
         </li>
         <li class="link-item">
           <div class="link-wrapper">
-            <a href="https://github.com/anuswarrrao" target="_blank" rel="noopener noreferrer me" aria-label="Visit GitHub profile of Anuswar R Rao" title="GitHub" itemprop="sameAs">
-              <img src="assets/images/icon/github.svg" class="icon icon-large" alt="" width="28" height="28">
-              <div>
-                <h3>GitHub</h3>
-                <small>Download free source code on GitHub.</small>
-              </div>
-            </a>
-            <button class="dots-btn share-trigger" type="button" data-link="https://github.com/anuswarrrao" aria-label="Share GitHub link" title="Share GitHub link">
-              <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true" width="28" height="28">
-            </button>
-          </div>
-        </li>
-        <li class="link-item">
-          <div class="link-wrapper">
-            <a href="https://www.linkedin.com/in/anuswarrrao" target="_blank" rel="noopener noreferrer me" aria-label="Visit LinkedIn profile of Anuswar R Rao" title="LinkedIn" itemprop="sameAs">
-              <img src="assets/images/icon/linkedin.svg" class="icon icon-large" alt="" width="28" height="28">
-              <div>
-                <h3>LinkedIn</h3>
-                <small>Connect with me on LinkedIn.</small>
-              </div>
-            </a>
-            <button class="dots-btn share-trigger" type="button" data-link="https://www.linkedin.com/in/anuswarrrao" aria-label="Share LinkedIn link" title="Share LinkedIn link">
-              <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true" width="28" height="28">
-            </button>
-          </div>
-        </li>
-        <li class="link-item">
-          <div class="link-wrapper">
-            <a href="https://www.instagram.com/anuswarrrao" target="_blank" rel="noopener noreferrer me" aria-label="Visit Instagram profile of Anuswar R Rao" title="Instagram" itemprop="sameAs">
-              <img src="assets/images/icon/instagram.svg" class="icon icon-large" alt="" width="28" height="28">
-              <div>
-                <h3>Instagram</h3>
-                <small>Follow me for more updates.</small>
-              </div>
-            </a>
-            <button class="dots-btn share-trigger" type="button" data-link="https://www.instagram.com/anuswarrrao" aria-label="Share Instagram link" title="Share Instagram link">
-              <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true" width="28" height="28">
-            </button>
-          </div>
-        </li>
-        <li class="link-item">
-          <div class="link-wrapper">
-            <a href="https://www.facebook.com/anuswarrrao" target="_blank" rel="noopener noreferrer me" aria-label="Visit Facebook profile of Anuswar R Rao" title="Facebook" itemprop="sameAs">
+            <a href="https://www.facebook.com/anuswarrrao" target="_blank" rel="noopener noreferrer me" data-track="Facebook" aria-label="Visit Facebook profile of Anuswar R Rao" title="Facebook" itemprop="sameAs">
               <img src="assets/images/icon/facebook.svg" class="icon icon-large" alt="" width="28" height="28">
               <div>
                 <h3>Facebook</h3>
                 <small>Check out my Facebook page.</small>
               </div>
             </a>
-            <button class="dots-btn share-trigger" type="button" data-link="https://www.facebook.com/anuswarrrao" aria-label="Share Facebook link" title="Share Facebook link">
+            <button class="dots-btn share-trigger" type="button" data-track="Share Facebook" data-link="https://www.facebook.com/anuswarrrao" aria-label="Share Facebook link" title="Share Facebook link">
               <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true" width="28" height="28">
             </button>
           </div>
         </li>
         <li class="link-item">
           <div class="link-wrapper">
-            <a href="https://x.com/anuswarrrao" target="_blank" rel="noopener noreferrer me" aria-label="Visit X (Twitter) profile of Anuswar R Rao" title="Twitter / X" itemprop="sameAs">
+            <a href="https://x.com/anuswarrrao" target="_blank" rel="noopener noreferrer me" data-track="Twitter" aria-label="Visit X (Twitter) profile of Anuswar R Rao" title="Twitter / X" itemprop="sameAs">
               <img src="assets/images/icon/twitter.svg" class="icon icon-large" alt="" width="28" height="28">
               <div>
-                <h3>Twitter</h3>
-                <small>Follow me on X / Twitter.</small>
+                <h3>Twitter / X</h3>
+                <small>Thoughts, shipping notes, and links.</small>
               </div>
             </a>
-            <button class="dots-btn share-trigger" type="button" data-link="https://x.com/anuswarrrao" aria-label="Share Twitter link" title="Share Twitter link">
+            <button class="dots-btn share-trigger" type="button" data-track="Share Twitter" data-link="https://x.com/anuswarrrao" aria-label="Share Twitter link" title="Share Twitter link">
+              <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true" width="28" height="28">
+            </button>
+          </div>
+        </li>
+        <li class="link-item">
+          <div class="link-wrapper">
+            <a href="https://coff.ee/anuswarrrao" target="_blank" rel="noopener noreferrer me" data-track="Buy Me a Coffee" aria-label="Support Anuswar R Rao with a coffee" title="Buy Me a Coffee" itemprop="sameAs">
+              <img src="assets/images/icon/coffee.svg" class="icon icon-large" alt="" width="28" height="28">
+              <div>
+                <h3>Buy Me a Coffee</h3>
+                <small>Support my open-source work.</small>
+              </div>
+            </a>
+            <button class="dots-btn share-trigger" type="button" data-track="Share Coffee" data-link="https://coff.ee/anuswarrrao" aria-label="Share coffee support link" title="Share coffee support link">
               <img src="assets/images/icon/dots.svg" class="dots-img icon-large" alt="" aria-hidden="true" width="28" height="28">
             </button>
           </div>

@@ -32,6 +32,7 @@
   --blob-shadow: rgba(47, 143, 255, 0.28);
 }
 
+html.light-mode,
 body.light-mode {
   --bg: #eef2f7;
   --text: #12151c;
@@ -72,6 +73,38 @@ body.light-mode {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+#theme-toggle:focus-visible,
+.share-actions button:focus-visible,
+.close-btn:focus-visible {
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .entrance,
+  .social-links .link-item,
+  .blob-wrapper {
+    animation: none !important;
+  }
 }
 
 /* =============== ENTRANCE ANIMATIONS =============== */
@@ -255,6 +288,7 @@ body.light-mode {
   letter-spacing: -0.01em;
 }
 
+html.light-mode .custom-toast,
 body.light-mode .custom-toast {
   background: rgba(255, 255, 255, 0.96) !important;
   color: #12151c !important;
@@ -272,6 +306,7 @@ body.light-mode .custom-toast {
   opacity: 1 !important;
 }
 
+html.light-mode .toast-close,
 body.light-mode .toast-close {
   color: #000 !important;
 }
@@ -306,6 +341,7 @@ body {
   overflow-x: hidden;
 }
 
+html.light-mode,
 body.light-mode {
   color-scheme: light;
 }
@@ -324,6 +360,7 @@ html {
   scrollbar-color: rgba(255, 255, 255, 0.22) transparent;
 }
 
+html.light-mode,
 html:has(body.light-mode) {
   scrollbar-color: rgba(18, 21, 28, 0.22) transparent;
 }
@@ -833,6 +870,8 @@ small {
           align-items: center;
 }
 
+html:not(.light-mode) .qr-image canvas,
+html:not(.light-mode) .qr-image img,
 body:not(.light-mode) .qr-image canvas,
 body:not(.light-mode) .qr-image img {
   background: #ffffff;

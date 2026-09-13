@@ -1,0 +1,37 @@
+# Enable Apache rewrite + headers on Hostinger / Apache hosts
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Prefer trailing-slash canonical for directories
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ %{REQUEST_URI}/ [R=301,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  # Keep CSP moderate so toast/share/QR scripts keep working
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io https://cloud.umami.is; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://plausible.io https://cloud.umami.is; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
+</IfModule>
+
+# Cache static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 30 days"
+</IfModule>
