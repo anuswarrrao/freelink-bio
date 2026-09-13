@@ -7,8 +7,9 @@ const applyTheme = (isLightMode) => {
   themeIcon.src = isLightMode
     ? "assets/images/icon/sun.svg"
     : "assets/images/icon/moon.svg";
+  toggleButton.setAttribute("aria-pressed", String(isLightMode));
   if (themeColorMeta) {
-    themeColorMeta.content = isLightMode ? "#ffffff" : "#000000";
+    themeColorMeta.content = isLightMode ? "#eef2f7" : "#000000";
   }
 };
 
