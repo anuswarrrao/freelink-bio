@@ -90,19 +90,5 @@ freelink-bio/
 | QRCode.js         | QR Code Generation               |
 | Toastify.js       | Toast Notifications              |
 
-## 🤝 Contributing
-
-Contributions are welcome! If you find any issues, have suggestions, or want to add new features, please open an issue or create a pull request.
-
-**Steps to contribute:**
-
-1. **Fork the repository**
-2. **Create a new branch** for your feature or fix
-3. **Commit your changes** with clear messages
-4. **Push to your fork**
-5. **Open a pull request** to the `main` branch
-
-
-
 ## 📄 License
 This project is licensed under the [MIT License](LICENSE.md), which means you are free to use, modify, and distribute the code.
