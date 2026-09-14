@@ -18,8 +18,8 @@ const applyTheme = (isLightMode) => {
 
   if (themeIcon) {
     themeIcon.src = isLightMode
-      ? "assets/images/icon/sun.svg"
-      : "assets/images/icon/moon.svg";
+      ? "assets/images/icon/sun.svg?v=2"
+      : "assets/images/icon/moon.svg?v=2";
   }
 
   if (toggleButton) {

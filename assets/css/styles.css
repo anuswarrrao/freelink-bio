@@ -27,7 +27,7 @@
   --popup-close-hover: rgba(255, 255, 255, 0.12);
   --popup-close-color: rgba(244, 247, 251, 0.8);
   --popup-btn-border: rgba(255, 255, 255, 0.12);
-  --popup-icon-filter: invert(1);
+  --popup-icon-filter: none;
   --overlay-bg: rgba(0, 0, 0, 0.62);
   --blob-shadow: rgba(47, 143, 255, 0.28);
 }
@@ -58,7 +58,7 @@ body.light-mode {
   --popup-close-hover: rgba(18, 21, 28, 0.09);
   --popup-close-color: rgba(18, 21, 28, 0.55);
   --popup-btn-border: rgba(18, 21, 28, 0.1);
-  --popup-icon-filter: none;
+  --popup-icon-filter: invert(1);
   --overlay-bg: rgba(18, 21, 28, 0.38);
   --blob-shadow: rgba(47, 143, 255, 0.18);
 }
@@ -100,185 +100,14 @@ body.light-mode {
     scroll-behavior: auto !important;
   }
 
-  .entrance,
-  .social-links .link-item,
   .blob-wrapper {
     animation: none !important;
   }
-}
 
-/* =============== ENTRANCE ANIMATIONS =============== */
-.entrance {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-.entrance--fade-in-down {
-  -webkit-animation-name: entranceFadeInDown;
-          animation-name: entranceFadeInDown;
-}
-
-.entrance--fade-in-right {
-  -webkit-animation-name: entranceFadeInRight;
-          animation-name: entranceFadeInRight;
-}
-
-.entrance--fade-in-up {
-  -webkit-animation-name: entranceFadeInUp;
-          animation-name: entranceFadeInUp;
-}
-
-.social-links .link-item {
-  -webkit-animation: entranceBounceIn 0.75s both;
-          animation: entranceBounceIn 0.75s both;
-}
-
-.social-links .link-item:nth-child(1) { -webkit-animation-delay: 0.05s; animation-delay: 0.05s; }
-.social-links .link-item:nth-child(2) { -webkit-animation-delay: 0.1s; animation-delay: 0.1s; }
-.social-links .link-item:nth-child(3) { -webkit-animation-delay: 0.15s; animation-delay: 0.15s; }
-.social-links .link-item:nth-child(4) { -webkit-animation-delay: 0.2s; animation-delay: 0.2s; }
-.social-links .link-item:nth-child(5) { -webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
-.social-links .link-item:nth-child(6) { -webkit-animation-delay: 0.3s; animation-delay: 0.3s; }
-.social-links .link-item:nth-child(7) { -webkit-animation-delay: 0.35s; animation-delay: 0.35s; }
-.social-links .link-item:nth-child(8) { -webkit-animation-delay: 0.4s; animation-delay: 0.4s; }
-
-@-webkit-keyframes entranceFadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes entranceFadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-}
-
-@-webkit-keyframes entranceFadeInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes entranceFadeInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-}
-
-@-webkit-keyframes entranceFadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes entranceFadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-}
-
-@-webkit-keyframes entranceBounceIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-            transform: scale3d(0.3, 0.3, 0.3);
-  }
-  20% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
-            transform: scale3d(1.1, 1.1, 1.1);
-  }
-  40% {
-    -webkit-transform: scale3d(0.9, 0.9, 0.9);
-            transform: scale3d(0.9, 0.9, 0.9);
-  }
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(1.03, 1.03, 1.03);
-            transform: scale3d(1.03, 1.03, 1.03);
-  }
-  80% {
-    -webkit-transform: scale3d(0.97, 0.97, 0.97);
-            transform: scale3d(0.97, 0.97, 0.97);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-  }
-}
-
-@keyframes entranceBounceIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-            transform: scale3d(0.3, 0.3, 0.3);
-  }
-  20% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
-            transform: scale3d(1.1, 1.1, 1.1);
-  }
-  40% {
-    -webkit-transform: scale3d(0.9, 0.9, 0.9);
-            transform: scale3d(0.9, 0.9, 0.9);
-  }
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(1.03, 1.03, 1.03);
-            transform: scale3d(1.03, 1.03, 1.03);
-  }
-  80% {
-    -webkit-transform: scale3d(0.97, 0.97, 0.97);
-            transform: scale3d(0.97, 0.97, 0.97);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
 
@@ -531,10 +360,18 @@ body::-webkit-scrollbar-corner {
 }
 
 #theme-toggle .icon {
-  -webkit-filter: none;
-          filter: none;
+  /* Lucide strokes are white; invert on dark-mode's light toggle button */
+  -webkit-filter: invert(1);
+          filter: invert(1);
   width: 18px;
   height: 18px;
+}
+
+html.light-mode #theme-toggle .icon,
+body.light-mode #theme-toggle .icon {
+  /* Dark toggle button — keep white strokes */
+  -webkit-filter: none;
+          filter: none;
 }
 
 #theme-toggle:hover {
@@ -761,17 +598,17 @@ small {
   transition: content 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-/* Change dots to arrow when hovering over the left side (link content) */
+/* Change dots to external-link arrow when hovering the link */
 .link-wrapper a:hover ~ .dots-btn .dots-img {
-  content: url("../images/icon/arrow.svg");
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  content: url("../images/icon/arrow.svg?v=2");
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
 }
 
 /* Keep dots when hovering directly on the dots button (right side) */
 .dots-btn:hover .dots-img {
-  content: url("../images/icon/dots.svg");
+  content: url("../images/icon/dots.svg?v=2");
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);

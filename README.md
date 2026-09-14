@@ -21,7 +21,9 @@ I got really frustrated with modern “link-in-bio” platforms. All their basic
 ## ✨ Features
 
 - **Dark/Light Mode Toggle**
-- **Animated Page Transitions**
+- **AOS Scroll Animations**
+- **Offline-ready PWA (Workbox)**
+- **Lucide UI icons**
 - **Fully Responsive Design**
 Smart Share Button on Every Link (Just like Instagram)
     - QR Code Preview
@@ -59,6 +61,8 @@ freelink-bio/
 ├── LICENSE.md               # MIT license file
 ├── README.md                # Project documentation
 ├── index.html               # Main HTML page
+├── sw.js                    # Workbox service worker
+├── manifest.json            # PWA web app manifest
 ├── CNAME                    # GitHub Pages custom domain (optional)
 │
 ├── assets/                  # Static assets directory
@@ -66,7 +70,7 @@ freelink-bio/
 │   │   └── styles.css       # Main stylesheet
 │   └── images/
 │       ├── favicon/         # Favicon files for all platforms
-│       ├── icon/            # SVG icons (arrow, dots, social media, etc.)
+│       ├── icon/            # Lucide UI icons + brand social SVGs
 │       ├── anuswar-rao-profile-photo.webp  # Profile photo
 │       └── preview.jpg      # Social media preview image
 │
@@ -75,8 +79,10 @@ freelink-bio/
 │   └── modules/             # Modular JS components
 │
 └── libraries/               # Third-party libraries
+    ├── aos/                 # Animate On Scroll (AOS)
     ├── google-font/         # Self-hosted Nunito font files
     ├── toastify/            # Toast notification library
+    ├── workbox/             # Self-hosted Workbox (PWA)
     └── qrcode.min.js        # QR code generation library
 ```
 
@@ -87,6 +93,9 @@ freelink-bio/
 |-------------------|----------------------------------|
 | **HTML, CSS, JS** | Core Structure & Functionality   |
 | Google Fonts      | Custom Typography (Nunito)       |
+| AOS               | Scroll Animations                |
+| Lucide            | UI icons (self-hosted SVGs)      |
+| Workbox           | Offline caching / service worker |
 | QRCode.js         | QR Code Generation               |
 | Toastify.js       | Toast Notifications              |
 
